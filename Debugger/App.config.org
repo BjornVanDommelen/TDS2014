@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="database" type="Tridion.ContentManager.Data.AdoNet.Sql.Configuration.SqlDbConfiguration, Tridion.ContentManager.Data.AdoNet.Sql, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+    <section name="tridionConfigSections" type="Tridion.Configuration.ConfigurationSections, Tridion.Common, Version=6.1.0.25, Culture=neutral, PublicKeyToken=349a39f202fa9b53" />
+    <section name="tridion.common" type="Tridion.Configuration.CommonSettings, Tridion.Common, Version=6.1.0.25, Culture=neutral, PublicKeyToken=349a39f202fa9b53" />
+    <section name="templateTypeRegistry" type="Tridion.ContentManager.TemplateTypes.Configuration.TemplateTypeRegistry, Tridion.ContentManager.TemplateTypes, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+    <section name="typeRegistry" type="Tridion.ContentManager.TypeRegistration.Configuration.TypeRegistrySection, Tridion.ContentManager.TypeRegistration, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+    <section name="loggingConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings, Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=349a39f202fa9b53" />
+    <section name="resolving" type="Tridion.ContentManager.Publishing.Resolving.Configuration.ResolvingConfiguration, Tridion.ContentManager.Publishing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+    <section name="rendering" type="Tridion.ContentManager.Publishing.Rendering.Configuration.RenderingConfiguration, Tridion.ContentManager, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+    <section name="publisher" type="Tridion.ContentManager.Publishing.Publisher.Configuration.PublisherConfiguration, Tridion.ContentManager.Publishing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+    <section name="transporting" type="Tridion.ContentManager.Publishing.Transporting.Configuration.TransportPackageConfiguration, Tridion.ContentManager.Publishing.Transporting, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+    <section name="search" type="Tridion.ContentManager.Search.Configuration.SearchConfiguration, Tridion.ContentManager.Search, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+    <section name="searchIndexer" type="Tridion.ContentManager.Search.Indexing.SearchIndexer.Configuration.SearchIndexerConfiguration, Tridion.ContentManager.Search.Indexing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+    <section name="tridion.contentmanager.security" type="Tridion.ContentManager.Security.Configuration.ContentManagerSecurityConfiguration, Tridion.ContentManager, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+    <section name="tridion.security" type="Tridion.Security.Configuration.SecurityConfiguration, Tridion.Common, Version=6.1.0.25, Culture=neutral, PublicKeyToken=349a39f202fa9b53" />
+    <section name="tridion.templating" type="Tridion.ContentManager.Templating.Configuration.TemplatingSettings, Tridion.ContentManager.Templating, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+    <section name="queuing" type="Tridion.ContentManager.Queuing.Configuration.QueuingConfiguration, Tridion.ContentManager.Queuing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+    <section name="workflow" type="Tridion.ContentManager.Workflow.Configuration.WorkflowConfiguration, Tridion.ContentManager, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+    <section name="eventSystem" type="Tridion.ContentManager.Extensibility.Configuration.EventSystemConfiguration, Tridion.ContentManager, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+    <section name="extensions" type="Tridion.ContentManager.Extensibility.Configuration.ExtensionsConfiguration, Tridion.ContentManager, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+    <section name="tridion.contentmanager" type="Tridion.ContentManager.Configuration.GeneralConfiguration, Tridion.ContentManager, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+  </configSections>
+  <database server="NLHDCSQL2008\SQL2008R2" name="HDC_LAB_CM" username="HDC_LAB_TCMDBUser"
+    password="tridion" authenticationMethod="Normal" commandTimeout="50" />
+  <configProtectedData>
+    <providers>
+      <add name="TridionRsaProtectedConfigurationProvider" keyContainerName="TridionRsaKeyContainer" useMachineContainer="true" description="Uses RsaCryptoServiceProvider to encrypt and decrypt" type="System.Configuration.RsaProtectedConfigurationProvider, System.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </providers>
+  </configProtectedData>
+  <tridionConfigSections>
+    <sections>
+      <clear />
+      <add />
+      <add name="loggingConfiguration" />
+      <add name="loggingConfiguration" />
+    </sections>
+  </tridionConfigSections>
+  <tridion.common>
+    <localization loggingCulture="en-us">
+      <resources>
+        <add baseName="Tridion.ContentManager.Localization.Resources" assembly="Tridion.ContentManager.Localization, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+      </resources>
+    </localization>
+    <tracing enabled="false">
+      <parameterValueTruncation default="50">
+        <parameterTypes>
+          <clear />
+          <!-- Do not remove or change the settings for type System.Data.IDataRecord -->
+          <add type="System.Data.IDataRecord" assembly="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" maxLength="0" />
+        </parameterTypes>
+      </parameterValueTruncation>
+    </tracing>
+  </tridion.common>
+  <templateTypeRegistry>
+    <templateTypes>
+      <clear />
+      <add id="4" name="CompoundTemplate" titleResource="lblCompoundTemplate" mimeType="text/x-tcm-compound" hasBinaryContent="false" contentHandler="Tridion.ContentManager.Templating.Compound.CompoundTemplateContentHandler, Tridion.ContentManager.Templating, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b">
+        <webDavFileExtensions>
+          <add itemType="ComponentTemplate" fileExtension="tctcmp" />
+          <add itemType="PageTemplate" fileExtension="tptcmp" />
+          <add itemType="TemplateBuildingBlock" fileExtension="tbbcmp" />
+        </webDavFileExtensions>
+      </add>
+      <add id="3" name="XSLT" mimeType="text/xml" hasBinaryContent="false" contentHandler="Tridion.ContentManager.TemplateTypes.Legacy.XsltTemplateContentHandler, Tridion.ContentManager.TemplateTypes, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b">
+        <webDavFileExtensions>
+          <add itemType="ComponentTemplate" fileExtension="tctx" />
+          <add itemType="TemplateBuildingBlock" fileExtension="tbbx" />
+        </webDavFileExtensions>
+      </add>
+      <add id="5" name="AssemblyTemplate" titleResource="lblAssemblyTemplate" mimeType="application/x-tcm-assembly" hasBinaryContent="true" contentHandler="Tridion.ContentManager.Templating.Assembly.AssemblyContentHandler, Tridion.ContentManager.Templating, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b">
+        <webDavFileExtensions>
+          <add itemType="TemplateBuildingBlock" fileExtension="tbbasm" />
+        </webDavFileExtensions>
+      </add>
+      <add id="6" name="CSharpTemplate" titleResource="lblCSharpTemplate" mimeType="text/x-tcm-csharpfragment" hasBinaryContent="false" contentHandler="Tridion.ContentManager.Templating.Assembly.CSharpSourceCodeContentHandler, Tridion.ContentManager.Templating, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b">
+        <webDavFileExtensions>
+          <add itemType="TemplateBuildingBlock" fileExtension="tbbcs" />
+        </webDavFileExtensions>
+      </add>
+      <add id="7" name="DreamweaverTemplate" titleResource="lblDreamweaverTemplate" mimeType="text/x-tcm-dreamweaver" hasBinaryContent="false" contentHandler="Tridion.ContentManager.Templating.Dreamweaver.DreamweaverContentHandler, Tridion.ContentManager.Templating, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b">
+        <webDavFileExtensions>
+          <add itemType="TemplateBuildingBlock" fileExtension="dwt" />
+        </webDavFileExtensions>
+      </add>
+      <add id="1" name="VBScript" mimeType="text/plain" titleResource="lblVBscriptTemplate" hasBinaryContent="false" contentHandler="Tridion.ContentManager.TemplateTypes.Legacy.ScriptedTemplateContentHandler, Tridion.ContentManager.TemplateTypes, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b">
+        <webDavFileExtensions>
+          <add itemType="ComponentTemplate" fileExtension="tcts" />
+          <add itemType="PageTemplate" fileExtension="tpts" />
+          <add itemType="TemplateBuildingBlock" fileExtension="tbbs" />
+        </webDavFileExtensions>
+      </add>
+      <add id="2" name="JScript" mimeType="text/plain" titleResource="lblJScriptTemplate" hasBinaryContent="false" contentHandler="Tridion.ContentManager.TemplateTypes.Legacy.ScriptedTemplateContentHandler, Tridion.ContentManager.TemplateTypes, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b">
+        <webDavFileExtensions>
+          <add itemType="ComponentTemplate" fileExtension="tcts" />
+          <add itemType="PageTemplate" fileExtension="tpts" />
+          <add itemType="TemplateBuildingBlock" fileExtension="tbbs" />
+        </webDavFileExtensions>
+      </add>
+    </templateTypes>
+  </templateTypeRegistry>
+  <loggingConfiguration name="Logging Application Block" tracingEnabled="false" defaultCategory="General" logWarningsWhenNoCategoriesMatch="false">
+    <listeners>
+      <add name="Tridion Console Trace Listener" listenerDataType="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomTraceListenerData, Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=349a39f202fa9b53" traceOutputOptions="None" type="Tridion.Logging.TridionConsoleTraceListener, Tridion.Logging, Version=6.1.0.25, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" initializeData="" formatter="Trace Text Formatter" />
+      <add name="Tridion Debug Trace Listener" listenerDataType="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomTraceListenerData, Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=349a39f202fa9b53" traceOutputOptions="None" type="Tridion.Logging.TridionDebugTraceListener, Tridion.Logging, Version=6.1.0.25, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" initializeData="" formatter="Trace Text Formatter" />
+      <add EventLog="Tridion" listenerDataType="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.CustomTraceListenerData, Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=349a39f202fa9b53" traceOutputOptions="None" type="Tridion.Logging.TridionEventLogTraceListener, Tridion.Logging, Version=6.1.0.25, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" name="Tridion Event Log" initializeData="" formatter="Tridion Text Formatter" />
+      <add fileName="C:\Program Files (x86)\Tridion\log\Tridion.ContentManager.log" header="----------------------------------------" footer="----------------------------------------" formatter="" listenerDataType="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FlatFileTraceListenerData, Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=349a39f202fa9b53" traceOutputOptions="None" type="Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.FlatFileTraceListener, Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=349a39f202fa9b53" name="Tridion CM Log File" />
+      <add name="Trace File" fileName="C:\Program Files (x86)\Tridion\log\Tridion.ContentManager.trace.log" formatter="Trace Text Formatter" listenerDataType="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FlatFileTraceListenerData, Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=349a39f202fa9b53" traceOutputOptions="None" type="Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.FlatFileTraceListener, Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=349a39f202fa9b53" />
+    </listeners>
+    <formatters>
+      <add template="{timestamp(HH:mm:ss.ffff)} &lt;{win32ThreadId}&gt; {message}" type="Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter, Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=349a39f202fa9b53" name="Trace Text Formatter" />
+      <add template="{message}&#xD;&#xA;&#xD;&#xA;Component: {keyvalue(component)}&#xD;&#xA;Errorcode: {keyvalue(errorcode)}&#xD;&#xA;User: {keyvalue(username)}&#xD;&#xA;&#xD;&#xA;{keyvalue(stacktrace)}" type="Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter, Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=349a39f202fa9b53" name="Tridion Text Formatter" />
+    </formatters>
+    <categorySources>
+      <add switchValue="All" name="Tridion.Logging.LoggingCategory.Tracing">
+        <listeners>
+          <add name="Trace File" />
+        </listeners>
+      </add>
+      <add switchValue="All" name="General" />
+    </categorySources>
+    <specialSources>
+      <allEvents switchValue="Warning" name="All Events">
+        <listeners>
+          <add name="Tridion Event Log" />
+        </listeners>
+      </allEvents>
+      <notProcessed switchValue="All" name="Unprocessed Category" />
+      <errors switchValue="All" name="Logging Errors &amp; Warnings" />
+    </specialSources>
+  </loggingConfiguration>
+  <resolving>
+    <mappings>
+      <clear />
+      <add itemType="Tridion.ContentManager.CommunicationManagement.Page">
+        <resolvers>
+          <add type="Tridion.ContentManager.Publishing.Resolving.PageResolver" assembly="Tridion.ContentManager.Publishing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+        </resolvers>
+      </add>
+      <add itemType="Tridion.ContentManager.CommunicationManagement.PageTemplate">
+        <resolvers>
+          <add type="Tridion.ContentManager.Publishing.Resolving.PageTemplateResolver" assembly="Tridion.ContentManager.Publishing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+        </resolvers>
+      </add>
+      <add itemType="Tridion.ContentManager.ContentManagement.Component">
+        <resolvers>
+          <add type="Tridion.ContentManager.Publishing.Resolving.ComponentResolver" assembly="Tridion.ContentManager.Publishing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+        </resolvers>
+      </add>
+      <add itemType="Tridion.ContentManager.CommunicationManagement.ComponentTemplate">
+        <resolvers>
+          <add type="Tridion.ContentManager.Publishing.Resolving.ComponentTemplateResolver" assembly="Tridion.ContentManager.Publishing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+        </resolvers>
+      </add>
+      <add itemType="Tridion.ContentManager.CommunicationManagement.Publication">
+        <resolvers>
+          <add type="Tridion.ContentManager.Publishing.Resolving.PublicationResolver" assembly="Tridion.ContentManager.Publishing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+        </resolvers>
+      </add>
+      <add itemType="Tridion.ContentManager.CommunicationManagement.StructureGroup">
+        <resolvers>
+          <add type="Tridion.ContentManager.Publishing.Resolving.StructureGroupResolver" assembly="Tridion.ContentManager.Publishing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+        </resolvers>
+      </add>
+      <add itemType="Tridion.ContentManager.ContentManagement.Category">
+        <resolvers>
+          <add type="Tridion.ContentManager.Publishing.Resolving.CategoryResolver" assembly="Tridion.ContentManager.Publishing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+        </resolvers>
+      </add>
+    </mappings>
+  </resolving>
+  <rendering previewPath="C:\Program Files (x86)\Tridion\web\Preview\">
+    <cache maxObjects="-1" defaultMaxObjectsPerRegion="50">
+      <regions>
+        <add name="Component" maxObjects="500" />
+      </regions>
+    </cache>
+    <renderers>
+      <add type="Tridion.ContentManager.Publishing.Legacy.Rendering.PageRenderer" assembly="Tridion.ContentManager.Publishing.Legacy, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+      <add type="Tridion.ContentManager.Publishing.Legacy.Rendering.ComponentPresentationRenderer" assembly="Tridion.ContentManager.Publishing.Legacy, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+      <add type="Tridion.ContentManager.Templating.TemplatingRenderer" assembly="Tridion.ContentManager.Templating, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+      <add type="Tridion.ContentManager.Publishing.Rendering.TaxonomyRenderer" assembly="Tridion.ContentManager.Publishing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+      <add type="Tridion.ContentManager.Publishing.Rendering.StructureGroupRenderer" assembly="Tridion.ContentManager.Publishing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b" />
+    </renderers>
+  </rendering>
+  <publisher cacheLifetime="PublishTransaction" heartbeatTimeout="300"
+    isLegacyPublishStateEventEnabled="false">
+    <mappings>
+      <clear />
+      <add publishInstructionType="Tridion.ContentManager.Publishing.PublishInstruction">
+        <publishTransactionHandlers>
+          <add type="Tridion.ContentManager.Publishing.Handling.DefaultPublishTransactionHandler"
+            assembly="Tridion.ContentManager.Publishing.Handling, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+        </publishTransactionHandlers>
+      </add>
+      <add publishInstructionType="Tridion.ContentManager.Publishing.UnPublishInstruction">
+        <publishTransactionHandlers>
+          <add type="Tridion.ContentManager.Publishing.Handling.DefaultPublishTransactionHandler"
+            assembly="Tridion.ContentManager.Publishing.Handling, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+        </publishTransactionHandlers>
+      </add>
+    </mappings>
+    <threading renderThreadCount="2" deployThreadCount="2" />
+  </publisher>
+  <transporting rootStorageFolder="c:\Temp">
+    <mappings>
+      <!-- For mapped types: if the type resides in the Tridion.ContentManager.dll, the attribute 'assembly' can be omitted. -->
+      <!-- The 'itemType' attribute may contain the reference to assembly where the type resides. In this case, the attribute 'assembly' is not needed. -->
+      <!-- For handlers: if handler resides in the current assembly, (that is, is the default handler), the attribute 'assembly' can be omitted. -->
+      <clear />
+      <add itemType="Tridion.ContentManager.CommunicationManagement.Page, Tridion.ContentManager, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b">
+        <handler type="Tridion.ContentManager.Publishing.Transporting.DefaultPageHandler" assembly="Tridion.ContentManager.Publishing.Transporting, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+      </add>
+      <add itemType="Tridion.ContentManager.ContentManagement.Component, Tridion.ContentManager, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b">
+        <handler type="Tridion.ContentManager.Publishing.Transporting.DefaultComponentHandler" assembly="Tridion.ContentManager.Publishing.Transporting, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+      </add>
+      <add itemType="Tridion.ContentManager.Publishing.Rendering.Binary, Tridion.ContentManager, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b">
+        <handler type="Tridion.ContentManager.Publishing.Transporting.DefaultBinaryHandler" assembly="Tridion.ContentManager.Publishing.Transporting, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+      </add>
+      <add itemType="Tridion.ContentManager.ContentManagement.Schema" assembly="Tridion.ContentManager, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b">
+        <handler type="Tridion.ContentManager.Publishing.Transporting.DefaultSchemaHandler" assembly="Tridion.ContentManager.Publishing.Transporting, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+      </add>
+      <add itemType="Tridion.ContentManager.CommunicationManagement.Template">
+        <handler type="Tridion.ContentManager.Publishing.Transporting.DefaultTemplateHandler" assembly="Tridion.ContentManager.Publishing.Transporting, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+      </add>
+      <add itemType="Tridion.ContentManager.ContentManagement.Category">
+        <handler type="Tridion.ContentManager.Publishing.Transporting.TaxonomyTransportPackageHandler" assembly="Tridion.ContentManager.Publishing.Transporting, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+      </add>
+      <add itemType="Tridion.ContentManager.CommunicationManagement.StructureGroup, Tridion.ContentManager, Version=6.1.0.996, Culture=neutral, PublicKeyToken=360aac4d3354074b">
+        <handler type="Tridion.ContentManager.Publishing.Transporting.DefaultStructureGroupHandler" assembly="Tridion.ContentManager.Publishing.Transporting, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+      </add>
+    </mappings>
+  </transporting>
+  <search hostUrl="http://localhost:8983/tridion" hostUsername="NLHDCLABTCM\tridionsys"
+    hostPassword="tridion" />
+  <searchIndexer heartbeatTimeout="300" indexingThreadCount="1"
+    hostUrl="http://localhost:8983/tridion" hostUsername="NLHDCLABTCM\tridionsys"
+    hostPassword="tridion">
+    <searchIndexingHandlers>
+      <add type="Tridion.ContentManager.Search.Indexing.Handling.DefaultSearchIndexingHandler"
+        assembly="Tridion.ContentManager.Search.Indexing, Version=6.1.0.996, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+    </searchIndexingHandlers>
+  </searchIndexer>
+  <tridion.templating cmePreviewUrl="/WebUI/Editors/CME/Views/Popups/Preview/Preview.aspx">
+    <debugging pdbDirectory="C:\Program Files (x86)\Tridion\Temp\" force32Bit="false" />
+    <mediators>
+      <mediator matchMIMEType="application/x-tcm-assembly" type="Tridion.ContentManager.Templating.Assembly.AssemblyMediator" />
+      <mediator matchMIMEType="text/x-tcm-dreamweaver" type="Tridion.ContentManager.Templating.Dreamweaver.DreamweaverMediator" />
+      <mediator matchMIMEType="text/x-tcm-compound" type="Tridion.ContentManager.Templating.Compound.CompoundTemplateMediator" />
+      <mediator matchMIMEType="text/x-tcm-csharpfragment" type="Tridion.ContentManager.Templating.Assembly.CSharpSourceCodeMediator" />
+    </mediators>
+    <functionSources>
+      <functionSource type="Tridion.ContentManager.Templating.Expression.BuiltInFunctions" />
+
+      <functionSource type="Tridion.OutboundEmail.Templating.OutboundEmailFunctionSource" assembly="Tridion.OutboundEmail.Templating, Version=2.2.0.742, Culture=neutral, PublicKeyToken=ddfc895746e5ee6b" />
+    </functionSources>
+    <defaultTemplatesScripts>
+      <defaultTemplatesScript scriptFile="SetupDefaultTemplates.xml" />
+      <defaultTemplatesScript scriptFile="SetupOutboundEmailTemplates.xml" />
+    </defaultTemplatesScripts>
+  </tridion.templating>
+  <typeRegistry>
+    <publicationTypes>
+      <!-- 
+      Constraints: 
+          1) id and name attribute is unique. 
+          2) id > 0
+          3) titleResource is optional. if titleResource is not provided then the value specified in name will be used as PublicationType.Title
+      -->
+      <add id="1" name="Content" titleResource="lblContentPublicationType" />
+      <add id="2" name="Web" titleResource="lblWebPublicationType" />
+      <add id="3" name="Email" titleResource="lblOutboundEmailPublicationType" />
+      <add id="4" name="Mobile" titleResource="lblMobilePublicationType" />
+    </publicationTypes>
+  </typeRegistry>
+  <queuing>
+    <queueConsumers>
+      <clear />
+      <add name="Publisher (rendering)" queueId="1" confId="1" port="1150" pollingInterval="30">
+        <filter />
+      </add>
+      <add name="Publisher (deploying)" queueId="2" confId="1" port="1151" pollingInterval="30">
+        <filter />
+      </add>
+      <add name="Search" queueId="3" confId="1" port="1152" pollingInterval="0">
+        <filter />
+      </add>
+      <add name="Workflow Agent" queueId="4" confId="1" port="1153" pollingInterval="0">
+        <filter />
+      </add>
+    </queueConsumers>
+  </queuing>
+  <workflow startWorkflowOnRollback="false" workflowAgentAccountUri="tcm:0-3-65552" />
+  <tridion.contentmanager>
+    <repository categoryEnumerationLimit="0" />
+    <license licenseFilePath="license.xml" />
+    <session transactionTimeout="60" />
+  </tridion.contentmanager>
+  <tridion.security credentialCacheExpiration="300" noHttpAuthenticationForUrls="(CoreService(\d\d\d\d)?\.svc/(streamUpload|wsHttp|mex))|(TemplateBuilder)" />
+  <tridion.contentmanager.security allowAutomaticUserCreation="true"
+    hideOrganizationalItemsNoAccess="false">
+    <impersonationUsers>
+      <clear />
+      <add name="NT AUTHORITY\NETWORK SERVICE" impersonationType="Windows" />
+      <add name="HINTTECH\bdommelen" impersonationType="Windows" />
+      <add name="NLHDCLABTCM\tridionsys" impersonationType="Windows" />
+    </impersonationUsers>
+  </tridion.contentmanager.security>
+  <eventSystem maxThreadCount="5" threadTimeout="30" threadNamePrefix="EventSystem" />
+  <extensions>
+
+  </extensions>
+  <system.net>
+    <settings>
+      <!--Set to true in order to get the exception details from the Search Service. When exception occurs inside solr, solr responses with multiple status line.
+      To handle response with multiple status line this property should be set to true else we get a protocol violation exception
+      More details: http://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequestelement.useunsafeheaderparsing.aspx-->
+      <httpWebRequest useUnsafeHeaderParsing="true" />
+    </settings>
+  </system.net>
+  <startup>
+    <supportedRuntime version="v4.0" />
+    <supportedRuntime version="v2.0.50727" />
+  </startup>
+  <runtime>
+    <!--Enable Server GC mode for better performance in CLR 4.0. Note that this may lead to memory issues in CLR 2.0.-->
+    <gcServer enabled="true" />
+  </runtime>
+</configuration>

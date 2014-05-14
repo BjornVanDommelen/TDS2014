@@ -1,0 +1,21 @@
+﻿<xsd:schema targetNamespace="http://www.hinttech.com/Tridion/DevSummit/ParameterSchemas/RegexReplace" elementFormDefault="qualified" xmlns:tcm="http://www.tridion.com/ContentManager/5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tcmi="http://www.tridion.com/ContentManager/5.0/Instance" xmlns="http://www.hinttech.com/Tridion/DevSummit/ParameterSchemas/RegexReplace">
+	<xsd:annotation>
+		<xsd:appinfo>
+			<tcm:Labels>
+				<tcm:Label ElementName="tp_find" Metadata="false">Find pattern</tcm:Label>
+				<tcm:Label ElementName="tp_regexoptions" Metadata="false">Regex options</tcm:Label>
+				<tcm:Label ElementName="tp_replace" Metadata="false">Replace pattern</tcm:Label>
+			</tcm:Labels>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.tridion.com/ContentManager/5.0/Instance"/>
+	<xsd:element name="Parameters">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="tp_find" minOccurs="1" maxOccurs="1" type="xsd:normalizedString"/>
+				<xsd:element name="tp_regexoptions" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+				<xsd:element name="tp_replace" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

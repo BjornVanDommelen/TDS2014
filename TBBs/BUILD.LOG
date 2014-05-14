@@ -1,0 +1,84 @@
+Error: Could not find file 'C:\SVNRoot\UnitTesting DevSummit\TBBs\bin\Debug\merged\Hinttech.Tridion.DevSummit.Unittesting.TBBs.dll'
+   at Tridion.ContentManager.Templating.UI.UploadAssembly.AssemblyStorageClient.CheckFilePresent(String path, String messageFormat)
+   at Tridion.ContentManager.Templating.UI.UploadAssembly.AssemblyStorageClient.ReadFile(String path)
+   at Tridion.ContentManager.Templating.UI.UploadAssembly.AssemblyStorageClient.UploadAssembly(String assemblyPath)
+   at Tridion.ContentManager.Templating.UI.UploadAssembly.AssemblyStorageClient.Main(String[] args)
+Info: Using URL 'http://nlhdclabtcm.hinttech.local//templating/AssemblyTemplateUploadWebService.asmx'
+Info: Logging in as HINTTECH\bdommelen
+---------------------------
+Success:
+(storage in folder tcm:22-154-2, 'TBB')
+Created new assembly template 'Hinttech.Tridion.DevSummit.Unittesting.TBBs'
+Added C# template 'DLL RegexReplace'
+Info: Using URL 'http://nlhdclabtcm.hinttech.local//templating/AssemblyTemplateUploadWebService.asmx'
+Info: Logging in as HINTTECH\bdommelen
+---------------------------
+Success:
+(storage in folder tcm:22-154-2, 'TBB')
+Updated assembly contents of assembly template 'Hinttech.Tridion.DevSummit.Unittesting.TBBs (2.0)'
+Updated C# template 'DLL RegexReplace (2.0)'
+Info: Using URL 'http://nlhdclabtcm.hinttech.local//templating/AssemblyTemplateUploadWebService.asmx'
+Info: Logging in as HINTTECH\bdommelen
+---------------------------
+Success:
+(storage in folder tcm:22-154-2, 'TBB')
+Updated assembly contents of assembly template 'Hinttech.Tridion.DevSummit.Unittesting.TBBs (3.0)'
+Updated C# template 'DLL RegexReplace (3.0)'
+Info: Using URL 'http://nlhdclabtcm.hinttech.local//templating/AssemblyTemplateUploadWebService.asmx'
+Info: Logging in as HINTTECH\bdommelen
+---------------------------
+Success:
+(storage in folder tcm:22-154-2, 'TBB')
+Updated assembly contents of assembly template 'Hinttech.Tridion.DevSummit.Unittesting.TBBs (4.0)'
+Updated C# template 'DLL RegexReplace (4.0)'
+Info: Using URL 'http://nlhdclabtcm.hinttech.local//templating/AssemblyTemplateUploadWebService.asmx'
+Info: Logging in as HINTTECH\bdommelen
+---------------------------
+Success:
+(storage in folder tcm:22-154-2, 'TBB')
+Updated assembly contents of assembly template 'Hinttech.Tridion.DevSummit.Unittesting.TBBs (5.0)'
+Updated C# template 'DLL RegexReplace (5.0)'
+Info: Using URL 'http://nlhdclabtcm.hinttech.local//templating/AssemblyTemplateUploadWebService.asmx'
+Info: Logging in as HINTTECH\bdommelen
+---------------------------
+Success:
+(storage in folder tcm:22-154-2, 'TBB')
+Updated assembly contents of assembly template 'Hinttech.Tridion.DevSummit.Unittesting.TBBs (6.0)'
+Updated C# template 'DLL RegexReplace (6.0)'
+Info: Using URL 'http://nlhdclabtcm.hinttech.local//templating/AssemblyTemplateUploadWebService.asmx'
+Info: Logging in as HINTTECH\bdommelen
+---------------------------
+Success:
+(storage in folder tcm:22-154-2, 'TBB')
+Updated assembly contents of assembly template 'Hinttech.Tridion.DevSummit.Unittesting.TBBs (7.0)'
+Updated C# template 'DLL RegexReplace (7.0)'
+Info: Using URL 'http://nlhdclabtcm.hinttech.local//templating/AssemblyTemplateUploadWebService.asmx'
+Info: Logging in as HINTTECH\bdommelen
+---------------------------
+Success:
+(storage in folder tcm:22-154-2, 'TBB')
+Updated assembly contents of assembly template 'Hinttech.Tridion.DevSummit.Unittesting.TBBs (8.0)'
+Updated C# template 'DLL RegexReplace (8.0)'
+Info: Using URL 'http://nlhdclabtcm.hinttech.local//templating/AssemblyTemplateUploadWebService.asmx'
+Info: Logging in as HINTTECH\bdommelen
+---------------------------
+Success:
+(storage in folder tcm:22-154-2, 'TBB')
+Updated assembly contents of assembly template 'Hinttech.Tridion.DevSummit.Unittesting.TBBs (9.0)'
+Updated C# template 'DLL RegexReplace (9.0)'
+Info: Using URL 'http://nlhdclabtcm.hinttech.local//templating/AssemblyTemplateUploadWebService.asmx'
+Info: Logging in as HINTTECH\bdommelen
+Error: Multiple template classes in assembly have the same TcmTemplateTitle attribute: DLL RegexReplace
+
+   at[remote] Tridion.ContentManager.Templating.Assembly.TemplateAssemblyInfo.ParseAssemblyType(...)
+   at[remote] Tridion.ContentManager.Templating.Assembly.TemplateAssemblyInfo.ParseAssembly(...)
+   at[remote] Tridion.ContentManager.Templating.Assembly.TemplateAssemblyInfo..ctor(...)
+   at[remote] Tridion.ContentManager.Templating.Assembly.TemplateAssemblyStorage.StoreTemplateAssembly(...)
+   at[remote] Tridion.ContentManager.Templating.Assembly.TemplateAssemblyStorage.PerformStoreTemplateAssembly(...)
+   at[remote] Tridion.ContentManager.Templating.WebService.AssemblyTemplateUploadWebService.PerformStoreTemplateAssembly(...)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at Tridion.ContentManager.Templating.UI.UploadAssembly.WebService.AssemblyTemplateUploadWebService.PerformStoreTemplateAssembly(Byte[] assemblyContents, Byte[] pdbContents, String assemblyFileName, String targetFolder)
+   at Tridion.ContentManager.Templating.UI.UploadAssembly.AssemblyStorageClient.PerformStoreTemplateAssembly(String webServiceUrl, String userName, String password, String overrideFolder, Byte[] assemblyContents, Byte[] pdbContents, String assemblyFileName)
+   at Tridion.ContentManager.Templating.UI.UploadAssembly.AssemblyStorageClient.UploadAssembly(String assemblyPath)
+   at Tridion.ContentManager.Templating.UI.UploadAssembly.AssemblyStorageClient.Main(String[] args)

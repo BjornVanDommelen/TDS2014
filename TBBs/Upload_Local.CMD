@@ -1,0 +1,1 @@
+REM @"%~dp0..\Libs\TcmUploadAssembly.exe" /folder:"tcm:22-154-2" /targeturl:"http://nlhdclabtcm.hinttech.local/" /username:"HINTTECH\bdommelen" /password:"Archangel#7094" /verbose "%~1">>"%~dp0BUILD.LOG"
